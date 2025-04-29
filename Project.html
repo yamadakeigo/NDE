@@ -40,14 +40,22 @@
             非破壊センシング研究室
           </span>
         </a>
-        <button class="sm:hidden text-2xl text-gray-800">☰</button>
-
         <nav class="hidden sm:flex flex-nowrap justify-end gap-x-4 sm:gap-x-6 text-[1rem] sm:text-lg md:text-xl font-medium whitespace-nowrap">
           <a href="./Introduction.html" class="text-gray-500 hover:text-black">Introduction</a>
           <a href="./Project.html" class="text-gray-500 hover:text-black">Project</a>
           <a href="./Members.html" class="text-gray-500 hover:text-black">Members</a>
           <a href="./Access.html" class="text-gray-500 hover:text-black">Access</a>
         </nav>
+        <button id="menu-button" class="sm:hidden text-2xl text-gray-800 ">☰</button>
+      </div>
+    
+        <nav id="mobile-menu" class="sm:hidden hidden flex flex-col items-center gap-y-4 text-lg font-medium text-gray-700 bg-white/90 shadow-md rounded-xl py-4 mt-4 mx-auto">
+          <a href="./Introduction.html" class="hover:text-black">Introduction</a>
+          <a href="./Project.html" class="hover:text-black">Project</a>
+          <a href="./Members.html" class="hover:text-black">Members</a>
+          <a href="./Access.html" class="hover:text-black">Access</a>
+        </nav>
+
       </div>
     </header>
 
@@ -147,6 +155,16 @@
           });
         });
       }
+    </script>
+     <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const button = document.getElementById('menu-button');
+        const menu = document.getElementById('mobile-menu');
+    
+        button.addEventListener('click', () => {
+          menu.classList.toggle('hidden');
+        });
+      });
     </script>
 
   </div>
