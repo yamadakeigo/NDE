@@ -132,28 +132,6 @@
       </div>
     </footer>
 
-    <!-- スクリプト -->
-    <script>
-      {
-        __sveltekit_rxmnqx = {
-          base: new URL(".", location).pathname.slice(0, -1)
-        };
-
-        const element = document.currentScript.parentElement;
-
-        Promise.all([
-          import("./_app/immutable/entry/start.CN6vCBXI.js"),
-          import("./_app/immutable/entry/app.B8t3zgvK.js")
-        ]).then(([kit, app]) => {
-          kit.start(app, element, {
-            node_ids: [0, 7],
-            data: [null, null],
-            form: null,
-            error: null
-          });
-        });
-      }
-    </script>
      <script>
       document.addEventListener('DOMContentLoaded', () => {
         const button = document.getElementById('menu-button');
